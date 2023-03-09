@@ -11,4 +11,8 @@ cd gem5/tests/test-progs/
 gcc -ggdb3 -O3 -D__DEBUG -c ../pthread.c -o ../pthread.o
 g++-4.8 -static -std=c++11 -lpthread -Wl,--no-whole-archive test.cpp -o test
 
+# Things to try
 
+
+git clone --depth 1 --branch v19.0.0.0 https://gem5.googlesource.com/public/gem5
+python3 `which scons` build/X86/gem5.opt -j9
